@@ -1,0 +1,1 @@
+# wp-protected-user-directory
