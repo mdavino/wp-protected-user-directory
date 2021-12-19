@@ -59,8 +59,8 @@ class Library_Viewer_Shortcode_Protected extends Library_Viewer_Shortcode{
 
         $user_root_dir = $this->globals['path'] . '/' . $this->get_private_folder_name() ;
         
-        if ( strrpos($real_path, $user_root_dir) !== 0 && strrpos($real_path, $this->globals['path'] . '/public' ) ){
-            $real_path = $this->globals['path'] . '/';
+        if ( strrpos($real_path, $user_root_dir) !== 0 && strrpos($real_path, $this->globals['path'] . '/public' ) !== 0 ){
+            $real_path = $user_root_dir . '/';
         }
 
         if ( rtrim($real_path, '/') == $user_root_dir && ! file_exists($user_root_dir) ){
