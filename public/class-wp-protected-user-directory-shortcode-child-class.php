@@ -73,7 +73,9 @@ class Library_Viewer_Shortcode_Protected extends Library_Viewer_Shortcode{
     
     private function get_private_folder_name(){
         if (is_user_logged_in()){
-            return wp_get_current_user()->user_login;
+            $user = wp_get_current_user();
+            $directory_name = get_user_meta($user->ID, 'directory_name', true);
+            return $directory_name = $directory_name ? $directory_name : $user->user_login;
         }else{
             return 'public';
         }
