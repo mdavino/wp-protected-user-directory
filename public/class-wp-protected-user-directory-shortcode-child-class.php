@@ -10,6 +10,7 @@ class Library_Viewer_Shortcode_Protected extends Library_Viewer_Shortcode{
             }
             $parameters['have_file_access'] = 'logged_in';
             add_action('lv_filter_global_real_path', array($this, 'filter_global_real_path'), 10);    
+            add_filter('lv_containing_files', array($this, 'order_array_files'));
         }
         parent::__construct($parameters);
         if (isset($parameters['protected']) && $parameters['protected']){
@@ -101,5 +102,11 @@ class Library_Viewer_Shortcode_Protected extends Library_Viewer_Shortcode{
 		}
 	}
 
+    public function order_array_files($file_array){
+        usort( $file_array, function( $a, $b ) { 
+			return filemtime($b['file_abs_path']) - filemtime($a['file_abs_path']); 
+		} );
+		return $file_array;
+    }
 
 }
