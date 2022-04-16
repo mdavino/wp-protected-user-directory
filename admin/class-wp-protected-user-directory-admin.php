@@ -141,7 +141,7 @@ class Wp_Protected_User_Directory_Admin {
 		  <h2>WP Protected User Directory</h2>
 		  <table class="form-table" role="presentation">
 			<tbody>
-				<tr class="user-directory-name-wrap">
+				<tr class="form-field form-required user-directory-name-wrap">
 					<th><label for="directory_name"><?php echo __('Directory Name', 'wp-protected-user-directory'); ?><span class="description"> (<?php echo __('Requested') ?>)</span></label></th>
 					<td><input type="text" name="directory_name" id="directory_name" value="<?php echo $directory_name; ?>" class="regular-text ltr">
 				</tr>

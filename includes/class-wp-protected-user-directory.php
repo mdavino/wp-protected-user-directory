@@ -77,7 +77,6 @@ class Wp_Protected_User_Directory {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-
 	}
 
 	/**
@@ -159,8 +158,10 @@ class Wp_Protected_User_Directory {
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'check_requirement' );
 		$this->loader->add_action( 'show_user_profile', $plugin_admin, 'user_profile_edit_action');
 		$this->loader->add_action( 'edit_user_profile', $plugin_admin, 'user_profile_edit_action');
+		$this->loader->add_action( 'user_new_form', $plugin_admin, 'user_profile_edit_action');
 		$this->loader->add_action( 'personal_options_update', $plugin_admin, 'user_profile_update_action');
 		$this->loader->add_action( 'edit_user_profile_update', $plugin_admin, 'user_profile_update_action');
+		$this->loader->add_action( 'user_register', $plugin_admin, 'user_profile_update_action');
 
 
 	}
