@@ -2,14 +2,14 @@
 
 /**
  * @link              https://github.com/mdavino/wp-protected-user-directory/
- * @since             1.0.0
+ * @since             1.0.1
  * @package           Wp_Protected_User_Directory
  *
  * @wordpress-plugin
  * Plugin Name:       WP Protected User Directory
  * Plugin URI:        https://github.com/mdavino/wp-protected-user-directory/
  * Description:       This plugin extends the functionality of the Library Viewer plugin by allowing users to have personal and protected file folders.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Michele D'Avino
  * Author URI:        https://github.com/mdavino/
  * License:           GPL-2.0+
